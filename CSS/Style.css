@@ -1,0 +1,199 @@
+@import url(style600min.css) screen and (min-width: 600px);
+
+#nav
+    {
+        float: right;
+    }
+        #nav ul
+        {
+            list-style: none;
+        }
+    @media screen and (min-width: 400px) and (orientation: portrait)
+        {
+                #nav li
+                {
+                    float: right;
+                    margin: 0 0 0 .5em;
+                    border:1px solid #000000;
+                }
+        }
+    @media screen and (min-width: 800px)
+        {
+            #nav
+            {
+                width: 200px;
+            }
+               #nav li
+                {
+                    float: left;
+                    margin: 0 0 0 .5em;
+                    border: none;               
+                }
+        }
+
+        @media only screen and (max-width : 480px) {
+            #mygrid {
+                display: -ms-grid;
+                margin: 3px;
+                -ms-grid-columns: 100%; /*one column taking full width */
+                -ms-grid-rows: 70px auto auto auto; /*4 rows */
+            }
+            #myheader {
+                    -ms-grid-row: 1;
+                    -ms-grid-column: 1;
+            }
+            #block1 {
+                    -ms-grid-row: 2; /*place into row 2 / column 1*/
+                    -ms-grid-column: 1;
+            }
+            #block2 {
+                    -ms-grid-row: 3;
+                    -ms-grid-column: 1;
+            }
+            #block3 {
+                    -ms-grid-row: 4;
+                    -ms-grid-column: 1;
+            }
+        }
+        @media only screen and (min-width : 481px) {
+            /*make two columns and move block 3 next to 1 — just because we can*/
+                #mygrid {
+                    display: -ms-grid;
+                    -ms-grid-columns: 10px 1fr 10px 1fr 10px; /*10px columns to spacing in between*/
+                    -ms-grid-rows: 100px 1fr 1fr; /*100px row and two rows each taking 1 fraction
+                                                      of available space*/
+                    margin: 5px;
+                }
+                #myheader {
+                        -ms-grid-row: 1;
+                        -ms-grid-column: 1;
+                        -ms-grid-column-span: 5;
+                        background-color: #EEB215;
+                }
+                #block1 {
+                        -ms-grid-row: 2;
+                        -ms-grid-column: 2;
+                        background-color: #B2B0B0;
+                }
+                #block2 {
+                   -ms-grid-row: 3;
+                   -ms-grid-column: 2;
+                   background-color: #726E6E;
+                }
+                #block3 {
+                   -ms-grid-row: 2; /*block 3 can go into row 2*/
+                   -ms-grid-column: 4;
+                   background-color: #515050;
+                }
+            }
+
+            h1{
+                font-size: 1.5em;
+          }
+          h1 a{
+            font-size: 0.5em;
+        }
+
+
+        /* card details start  */
+section{
+    padding: 100px 0;
+}
+.details-card {
+	background: #ecf0f1;
+}
+
+.card-content {
+	background: #ffffff;
+	border: 4px;
+	box-shadow: 0 2px 5px 0 rgba(0,0,0,.16), 0 2px 10px 0 rgba(0,0,0,.12);
+}
+
+.card-img {
+	position: relative;
+	overflow: hidden;
+	border-radius: 0;
+	z-index: 1;
+}
+
+.card-img img {
+	width: 100%;
+	height: auto;
+	display: block;
+}
+
+.card-img span {
+	position: absolute;
+    top: 15%;
+    left: 12%;
+    background: #1ABC9C;
+    padding: 6px;
+    color: #fff;
+    font-size: 12px;
+    border-radius: 4px;
+    -webkit-border-radius: 4px;
+    -moz-border-radius: 4px;
+    -ms-border-radius: 4px;
+    -o-border-radius: 4px;
+    transform: translate(-50%,-50%);
+}
+.card-img span h4{
+        font-size: 12px;
+        margin:0;
+        padding:10px 5px;
+         line-height: 0;
+}
+.card-desc {
+	padding: 1.25rem;
+}
+
+.card-desc h3 {
+	color: #000000;
+    font-weight: 600;
+    font-size: 1.5em;
+    line-height: 1.3em;
+    margin-top: 0;
+    margin-bottom: 5px;
+    padding: 0;
+}
+
+.card-desc p {
+	color: #747373;
+    font-size: 14px;
+	font-weight: 400;
+	font-size: 1em;
+	line-height: 1.5;
+	margin: 0px;
+	margin-bottom: 20px;
+	padding: 0;
+	font-family: 'Raleway', sans-serif;
+}
+.btn-card{
+	background-color: #1ABC9C;
+	color: #fff;
+	box-shadow: 0 2px 5px 0 rgba(0,0,0,.16), 0 2px 10px 0 rgba(0,0,0,.12);
+    padding: .84rem 2.14rem;
+    font-size: .81rem;
+    -webkit-transition: color .15s ease-in-out,background-color .15s ease-in-out,border-color .15s ease-in-out,-webkit-box-shadow .15s ease-in-out;
+    transition: color .15s ease-in-out,background-color .15s ease-in-out,border-color .15s ease-in-out,-webkit-box-shadow .15s ease-in-out;
+    -o-transition: color .15s ease-in-out,background-color .15s ease-in-out,border-color .15s ease-in-out,box-shadow .15s ease-in-out;
+    transition: color .15s ease-in-out,background-color .15s ease-in-out,border-color .15s ease-in-out,box-shadow .15s ease-in-out;
+    transition: color .15s ease-in-out,background-color .15s ease-in-out,border-color .15s ease-in-out,box-shadow .15s ease-in-out,-webkit-box-shadow .15s ease-in-out;
+    margin: 0;
+    border: 0;
+    -webkit-border-radius: .125rem;
+    border-radius: .125rem;
+    cursor: pointer;
+    text-transform: uppercase;
+    white-space: normal;
+    word-wrap: break-word;
+    color: #fff;
+}
+.btn-card:hover {
+    background: orange;
+}
+a.btn-card {
+    text-decoration: none;
+    color: #fff;
+}
+/* End card section */
